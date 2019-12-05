@@ -1,37 +1,63 @@
-## Welcome to GitHub Pages
+## Welcome to the Machine Economy Cookbook
 
-You can use the [editor on GitHub](https://github.com/machineeconomy/cookbook/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Here you get information, tutorials and code snippets about the machine economy based on the iota technology.  
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### IOTA payment Module
 
-### Markdown
+The IOTA payment module brings an IOTA Wallet to your device. 
+This module can easily extend your nodejs or express app or ran as a standalone server and brings an IOTA payment API. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+#### Level 
+Low
 
+#### Skills
+
+  \++ Javascript: nodejs
+
+  \+ Docker (optional)
+
+#### Example 
 ```markdown
-Syntax highlighted code block
+var paymentModule = require('iota-payment')
+var app = require('express')()
 
-# Header 1
-## Header 2
-### Header 3
+let server = paymentModule.createServer(app)
 
-- Bulleted
-- List
+// Start server with iota-payment module on '/payments'
+server.listen(3000, function () {
+    console.log(`Server started on http://localhost:3000 `)
+})
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+For more details see [machineeconomy/iota-payment](https://github.com/machineeconomy/iota-payment).
 
-### Jekyll Themes
+### Build your Machine Economy
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/machineeconomy/cookbook/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+#### Level 
+Advanced
+
+#### Skills
+
+  \+++ Javascript: nodejs
+
+  \++ Hardware: Raspberry pi
+
+  \+ Docker (optional)
+
+This is a tutorial for building your own machine economy with custom machines, energy providers and governments.
+
+Our machine economy has three participants. A robot, a wind energy provider and an energy government. 
+
+#### The use case
+You can pay a robot for a service.
+The robot will pay the energy for itself to the wind energy provider.
+The government takes some taxes from the wind energy provider. 
+
+[Robot](https://github.com/machineeconomy/akita-robot).
+[Wind Provider](https://github.com/machineeconomy/akita-energy).
+[Energy Government](https://github.com/machineeconomy/akita-government).
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Having trouble with this? Check out our [Discord](https://discord.gg/DXg6SHP). 
